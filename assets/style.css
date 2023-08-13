@@ -1,0 +1,102 @@
+*, *:before, *:after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+#quiz-section {
+	display: none;
+}
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	font-family: Arial, sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: whitesmoke;
+	position: relative;
+}
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	max-width: 800px;
+	text-align: center;
+	margin: auto;
+}
+h1 {
+	font-size: 3em;
+	margin-bottom: 20px;
+}
+p {
+	font-size: 1.5em;
+	margin-bottom: 20px;
+}
+button {
+	margin: 10px;
+	padding: 10px 20px;
+	font-size: 16px;
+	cursor: pointer;
+}
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	text-decoration: none;
+}
+#timer {
+	padding: 5px 10px;
+	border-radius: 5px;
+}
+#high-scores {
+	text-decoration: none;
+}
+#start-btn {
+	font-size: 1.3em;
+	display: block;
+	margin: 20px auto;
+	padding: 10px 20px;
+	font-size: 1.5em;
+	background-color: #3498db;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	border: none;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+#start-btn:hover {
+	background-color: #2980b9;
+	color: #ffffff;
+	transform: scale(1.04);
+}
+#end-game {
+	text-align: center;
+	margin-top: 15%;
+}
+#high-scores {
+	font-size: 1.3em;
+	display: block;
+	padding: 10px 20px;
+	font-size: 1em;
+	background-color: #3498db;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+#high-scores:hover {
+	background-color: #2980b9;
+	color: #ffffff;
+	transform: scale(1.04);
+}
