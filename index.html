@@ -1,34 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<title>Code Quiz</title>
-	<link href="/assets/style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Quiz</title>
+    <link rel="stylesheet" href="/assets/style.css">
 </head>
+
 <body>
-	<div class="header">
-		<a href="#" id="high-scores" onclick="showHighScores()">View High Scores</a>
-		<div id="timer">
-			Time: 75
-		</div>
-	</div>
-	<div class="wrapper">
-		<h1 id="title">Coding Quiz Challenge</h1>
-		<p id="intro">Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p><button id="start-btn" onclick="startQuiz()">Start Quiz</button>
-		<div id="quiz-section">
-			<div id="question"></div><button class="option-btn" onclick="submitAnswer(0)">Option 1</button> <button class="option-btn" onclick="submitAnswer(1)">Option 2</button> <button class="option-btn" onclick="submitAnswer(2)">Option 3</button> <button class="option-btn" onclick="submitAnswer(3)">Option 4</button>
-		</div>
-		<div id="end-game" style="display: none;">
-			<h2>Your score is: <span id="final-score"></span></h2>
-			<p>Enter your initials: <input id="initials" maxlength="3" type="text"></p><button onclick="saveScore()">Save Score</button>
-		</div>
-		<div id="high-scores-section" style="display: none;">
-			<h2>High Scores</h2>
-			<ul id="high-scores-list"></ul><button onclick="hideHighScores()">Go Back</button> <button id="clear-scores-btn" onclick="clearScores()">Clear High Scores</button>
-		</div>
-	</div>
-	<script src="script.js">
-	</script>
+
+ <!-- Header section with high scores link and timer -->
+    <div class="header">
+        <a href="#" id="high-scores" onclick="showHighScores()">View High Scores</a>
+        <div id="timer">Time: 75</div>
+    </div>
+
+<!-- Main content wrapper -->
+    <div class="wrapper">
+        <!-- Title and intro text -->
+        <h1 id="title">Coding Quiz Challenge</h1>
+        <p id="intro">Try to answer the following code-related questions within the time limit. 
+            Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
+        <!-- Button to start the quiz -->
+        <button id="start-btn" onclick="startQuiz()">Start Quiz</button>
+        <!-- Quiz section with question and answer options -->
+        <div id="quiz-section">
+            <div id="question"></div>
+            <button class="option-btn" onclick="submitAnswer(0)">Option 1</button>
+            <button class="option-btn" onclick="submitAnswer(1)">Option 2</button>
+            <button class="option-btn" onclick="submitAnswer(2)">Option 3</button>
+            <button class="option-btn" onclick="submitAnswer(3)">Option 4</button>
+        </div>
+
+
+<!-- End-game section -->
+        <div id="end-game" style="display: none;">
+            <h2>Your score is: <span id="final-score"></span></h2>
+            <p>Enter your initials: <input type="text" id="initials" maxlength="3"></p>
+            <button onclick="saveScore()">Save Score</button>
+        </div>
+
+
+ <!-- High scores section -->
+        <div id="high-scores-section" style="display: none;">
+            <h2>High Scores</h2>
+            <ul id="high-scores-list"></ul>
+            <button onclick="hideHighScores()">Go Back</button>
+            <button id="clear-scores-btn" onclick="clearScores()">Clear High Scores</button>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
