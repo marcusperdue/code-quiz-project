@@ -5,7 +5,7 @@ var score = 0;
 var questions = [{
 	question: 'Inside which HTML element do we put the JavaScript?:',
 	options: ['<scripting>', '<js>', '<script>', '<javascript>'],
-	answer: 2
+	answer: 3
 }, {
 	question: 'Where is the correct place to insert a JavaScript?:',
 	options: [' The <head> section', 'The <body> section ', 'Both <head> and <body>', 'The <script> section'],
@@ -130,7 +130,8 @@ function submitAnswer(options) {
 
 
 function endQuiz() {
-    clearInterval(interval); // Stop the timer interval
+    // Stop the timer interval
+    clearInterval(interval); 
 
     // Hide the quiz section to display the end-game section
     document.getElementById('quiz-section').style.display = 'none';
@@ -157,12 +158,17 @@ function saveScore() {
 
     // Retrieve high scores from local storage or initialize an empty array
     var highScores = JSON.parse(localStorage.getItem("highScores") || "[]");
+    
+  
 
     // Add the current player's initials and score to the high scores array
     highScores.push({
         initials: initials,
         score: score
     });
+
+  // Sorts highscores on their score values, doesnt work everytime
+    highScores.sort((a, b) => b.score - a.score);
 
     // Store the updated high scores array back in local storage
     localStorage.setItem("highScores", JSON.stringify(highScores));
